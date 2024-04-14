@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faturamento</title>
+</head>
+<body>
+   <h1>Papelaria Seu Afonso</h1>
+   <h2>Faturamento</h2>
+   <p>Faturamento total de R$ {{faturamento_total}}</p>
+   <hr>
+   <h3>Histórico de compras</h3>
+   <hr>
+   {% for venda in vendas%}
+        
+        <p>{{venda.produto.nome}}: {{venda.quantidade_da_compra}} x {{venda.produto.preco}} = {{valor_compra}} </p>
+        <hr>
+   {% endfor %}
+   <p><a href = {%url 'home'%}>Voltar para a página inicial</a></p>
+</body>
+</html>

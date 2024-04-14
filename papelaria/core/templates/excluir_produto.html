@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faturamento</title>
+</head>
+<body>
+   <h1>Papelaria Seu Afonso</h1>
+   <h2>Cadastrar Produto : {{produto.nome}}</h2>
+   <form method = 'post'>
+        {% csrf_token %}
+        <p>Tem certeza que deseja excluir esse produto?</p>
+        <button type='submit'>Sim</button>
+        <button><a href = {%url 'home' %}>Não</a></button>
+   </form>
+
+</body>
+</html>
