@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da Página</title>
+</head>
+<body>
+    <h1>Faturamento</h1>
+    <hr>
+    <h2>Faturamento total:</h2>
+    <h3>R${{faturamento_total}}</h3>
+    <h4>Histórico de compras:</h4>
+    <hr>
+    {%for venda in vendas%}
+        <p style="font-weight: bold;">{{venda}}</p>
+        <p>{{venda.produto.preco}} x {{venda.quantidade_da_compra}} = {{venda.faturamento}}</p>
+        <hr>
+    {%endfor%}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelaria API</title>
+    <!-- Adicione aqui seus links para folhas de estilo CSS -->
+</head>
+<body>
+    <h1>Papelaria API</h1>
+    <h2>Redirecionamentos</h2>
+    <hr>
+    <p><a href = {%url 'LCProduto'%}>LCProduto</a></p>
+    <h3>RUDProdutos:</h3>
+    {% for  produto in produtos%}
+        <p><a href = {%url 'RUDProduto' produto.id%}>RUDProduto - {{produto.nome}}</a></p>
+    {% endfor %}
+    <hr>
+    <p><a href = {%url 'LCVenda'%}>Link para a página LCVenda</a></p>
+    <h3>RUDVendas:</h3>
+    {% for  venda in vendas  %}
+        <p><a href = {%url 'RUDVenda' venda.id%}>RUDVenda - {{venda}}</a></p>
+    {% endfor %}
+    <hr>
+    
+</body>
+</html>
